@@ -15,6 +15,7 @@ Where #comictagger is an empty div that exists somewhere in the page, ie:
 <div id="comictagger"></div>
 
 You can override the various options by passing in a javascript object to the function. The defaults are shown below:
+(just include the ones you want to change)
 
 $('#comictagger').comicTagger({
   separator:" | ",            // what to put in between each item
