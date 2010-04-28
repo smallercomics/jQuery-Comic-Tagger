@@ -1,0 +1,15 @@
+._comictagger
+{
+  position:relative;
+}
+._comictagger span
+{
+  cursor:pointer;
+}
+._comictagger .ct_pop
+{
+  position:absolute;
+  border:1px solid #000;
+  background-color:#fff;
+  padding:8px;
+}
