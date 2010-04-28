@@ -24,7 +24,9 @@
       text_info_pop:"To remember where you are, select 'Tag this comic', then later select 'Go to tag' to return to where you left off."
     };
     var options = $.extend(defaults, _options);
-    
+    if (!options.location){
+      options.location = window.location;
+    }
     /**
      * The following two functions have been borrowed from Peter-Paul Koch.
      * Please find them here: http://www.quirksmode.org
@@ -52,7 +54,7 @@
     }
     
     var do_tag = function(o){
-      createCookie("bm", window.location, options.cl);
+      createCookie("bm", options.location, options.cl);
       $(o).parent().find(".ct_goto").removeClass(options.class_gotooff).addClass(options.class_gotoon);
       $(o).parent().find(".ct_clear").removeClass(options.class_clearoff).addClass(options.class_clearon);
     }
@@ -68,7 +70,6 @@
       }	
     }
     var do_info = function(o){
-      
       $(o).parent().find(".ct_pop").show();
     }
     var hide_info = function(o){
