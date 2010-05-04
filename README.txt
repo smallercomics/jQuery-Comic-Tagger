@@ -1,8 +1,15 @@
+A simple bookmarking script.
+
+The original ComicTagger was written by Ash Young, it lets a user bookmark their place in a website
+(primarily, but not always webcomics) by means of a local cookie, so that when they return to the
+site at a later date they can resume where they left off.
+This version does the same thing, and has been repackaged as a jquery plugin, and by default uses css styled
+text, rather than images.
+
 To use:
 * Include jquery and jquery-comictagger.js to your pages.
 * Add styles from jquery-comictagger.css, adapt as required.
-
-Initialise by adding something like the following jquery your your comic pages:
+* Initialise by adding something like the following to each page of your site where bookmarking is required:
 
 <script type="text/javascript">
   $(document).ready(function(){
@@ -15,7 +22,19 @@ Where #comictagger is an empty div that exists somewhere in the page, ie:
 <div id="comictagger"></div>
 
 You can override the various options by passing in a javascript object to the function. The defaults are shown below:
-(just include the ones you want to change)
+
+Just include the ones you want to change, for example:
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#comictagger').comicTagger({
+      text_tag:"Mark this spot",
+      text_goto:"Back to where you were",
+    });
+  });
+</script>
+
+The location option is particularly useful if the site fron page contains dynamic content, you can specify a particular location(permalink) to bookmark and return to
 
 $('#comictagger').comicTagger({
   location: "http://example.com/page.html"  // URL to tag - defaults to the current URL
