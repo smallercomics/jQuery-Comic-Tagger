@@ -1,0 +1,60 @@
+._comictagger
+{
+  position:relative; /* so we can absolutely position the info pop relative to this container*/
+}
+._comictagger span
+{
+  cursor:pointer; /* because it's not using a tags, this doesn't happen automagically */
+}
+
+._comictagger span.ct_tagged
+{
+    cursor:default;
+}
+._comictagger .ct_pop /* this is functional, but fairly ugly. Pretty it up.*/
+{
+  position:absolute;
+  border:1px solid #000;
+  background-color:#fff;
+  padding:8px;
+}
+
+._comictagger .ct_tag{
+    display:inline;
+}
+._comictagger.ct_is_tagged .ct_tag{
+    display:none;
+}
+
+._comictagger .ct_tagged{
+    display:none;
+}
+._comictagger.ct_is_tagged .ct_tagged{
+    display:inline;
+}
+
+/* these are just some basic styles to convince myself it's working */
+._comictagger .add_tag
+{
+  font-weight:bold;
+}
+._comictagger .clear_off
+{
+  text-decoration:line-through;
+}
+._comictagger .goto_off
+{
+  text-decoration:line-through;
+}
+._comictagger .clear_on
+{
+  text-decoration:underline;
+}
+._comictagger .goto_on
+{
+  text-decoration:underline;
+}
+._comictagger .info
+{
+  font-style:italic;
+}
