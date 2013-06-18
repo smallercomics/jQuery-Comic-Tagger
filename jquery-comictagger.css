@@ -6,12 +6,31 @@
 {
   cursor:pointer; /* because it's not using a tags, this doesn't happen automagically */
 }
+
+._comictagger span.ct_tagged
+{
+    cursor:default;
+}
 ._comictagger .ct_pop /* this is functional, but fairly ugly. Pretty it up.*/
 {
   position:absolute;
   border:1px solid #000;
   background-color:#fff;
   padding:8px;
+}
+
+._comictagger .ct_tag{
+    display:inline;
+}
+._comictagger.ct_is_tagged .ct_tag{
+    display:none;
+}
+
+._comictagger .ct_tagged{
+    display:none;
+}
+._comictagger.ct_is_tagged .ct_tagged{
+    display:inline;
 }
 
 /* these are just some basic styles to convince myself it's working */
